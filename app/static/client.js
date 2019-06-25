@@ -34,8 +34,8 @@ function analyze() {
     el("analyze-button").innerHTML = "Analyze";
   };
 
-  //var fileData = new FormData();
-  //fileData.append("file", uploadFiles[0]);
+  var formData = new FormData();
+  formData.append("comment", comment);
   xhr.send(comment);
 }
 
