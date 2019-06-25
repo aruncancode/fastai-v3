@@ -1,18 +1,18 @@
 var el = x => document.getElementById(x);
 
-function showPicker() {
-  el("file-input").click();
-}
+//function showPicker() {
+//  el("file-input").click();
+//}
 
-function showPicked(input) {
-  el("upload-label").innerHTML = input.files[0].name;
-  var reader = new FileReader();
-  reader.onload = function(e) {
-    el("image-picked").src = e.target.result;
-    el("image-picked").className = "";
-  };
-  reader.readAsDataURL(input.files[0]);
-}
+//function showPicked(input) {
+//  el("upload-label").innerHTML = input.files[0].name;
+//  var reader = new FileReader();
+//  reader.onload = function(e) {
+//    el("image-picked").src = e.target.result;
+//    el("image-picked").className = "";
+//  };
+//  reader.readAsDataURL(input.files[0]);
+//}
 
 function analyze() {
   var comment = el("textArea").value;
@@ -34,8 +34,8 @@ function analyze() {
     el("analyze-button").innerHTML = "Analyze";
   };
 
-  var fileData = new FormData();
-  fileData.append("file", uploadFiles[0]);
-  xhr.send(fileData);
+  //var fileData = new FormData();
+  //fileData.append("file", uploadFiles[0]);
+  xhr.send(comment);
 }
 
