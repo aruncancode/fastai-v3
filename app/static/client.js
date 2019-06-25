@@ -16,7 +16,7 @@ var el = x => document.getElementById(x);
 
 function analyze() {
   var comment = el("textArea").value;
-  if (comment.length !== 1) alert("Please include text to classify!");
+  if (comment.length === 0) alert("Please include text to classify!");
 
   el("analyze-button").innerHTML = "Classifying...";
   var xhr = new XMLHttpRequest();
