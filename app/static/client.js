@@ -15,8 +15,8 @@ function showPicked(input) {
 }
 
 function analyze() {
-  var uploadFiles = el("file-input").files;
-  if (uploadFiles.length !== 1) alert("Please include text to classify!");
+  var comment = el("textArea").value;
+  if (comment.length !== 1) alert("Please include text to classify!");
 
   el("analyze-button").innerHTML = "Classifying...";
   var xhr = new XMLHttpRequest();
