@@ -12,7 +12,7 @@ from starlette.staticfiles import StaticFiles
 export_file_url = 'https://drive.google.com/uc?export=download&id=1kqwG1PtolkFd8eTgt_3culfG66lnfzxH'
 export_file_name = 'GF_NLP_Classifier.pkl'
 
-classes = ['positive', 'negative', 'neutral']
+classes = ['Complaint', 'Compliment', 'Inquiry','Request']
 path = Path(__file__).parent
 
 app = Starlette()
