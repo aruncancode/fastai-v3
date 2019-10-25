@@ -65,8 +65,10 @@ async def analyze(request):
     
     form_data = await request.form()
     comment = await (form_data['comment'].read())
-    prediction = learn.predict(comment)
-    return JSONResponse({'result': str(prediction)})
+    return JSONResponse({'result': str(comment)})
+    
+    #prediction = learn.predict(comment)
+    #return JSONResponse({'result': str(prediction)})
     
     #Test Result --bhd
     #return JSONResponse({'result': 'Result Returned'})
