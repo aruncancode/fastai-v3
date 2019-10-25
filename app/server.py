@@ -63,12 +63,13 @@ async def analyze(request):
     #img = open_image(BytesIO(img_bytes))
     
     
-    #form_data = await request.form()
-    #comment = await (form_data['comment'].read())
-    #prediction = learn.predict(comment)
-    #return JSONResponse({'result': str(prediction)})
+    form_data = await request.form()
+    comment = await (form_data['comment'].read())
+    prediction = learn.predict(comment)
+    return JSONResponse({'result': str(prediction)})
     
-    return JSONResponse({'result': 'Result Returned'})
+    #Test Result --bhd
+    #return JSONResponse({'result': 'Result Returned'})
 
 
 if __name__ == '__main__':
