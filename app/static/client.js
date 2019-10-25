@@ -36,6 +36,6 @@ function analyze() {
 
   var formData = new FormData();
   formData.append("comment", comment);
-  xhr.send(comment);
+  xhr.send(formData);
 }
 
