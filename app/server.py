@@ -64,7 +64,7 @@ async def analyze(request):
     
     
     form_data = await request.form()
-    #comment = await form_data.get('comment');
+    comment = await form_data.get('comment');
     #comment = await (form_data['file'].read())
     return JSONResponse({'result': form_data})
     
