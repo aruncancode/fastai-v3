@@ -64,7 +64,7 @@ async def analyze(request):
     
     
     form_data = await request.form()
-    comment = await (form_data['comment'].read())
+    comment = await (form_data['file'].read())
     return JSONResponse({'result': comment})
     
     #prediction = learn.predict(comment)
