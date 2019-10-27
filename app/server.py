@@ -63,10 +63,11 @@ async def analyze(request):
     #img = open_image(BytesIO(img_bytes))
     
     
-    form_data = await request.form()
-    comment = form_data.get('comment');
+    comment = request.data["comment"]
+    #form_data = await request.form()
+    #comment = form_data.get('comment');
     #comment = await (form_data['file'].read())
-    return JSONResponse({'result': form_data})
+    return JSONResponse({'result': comment})
     
     #prediction = learn.predict(comment)
     #return JSONResponse({'result': str(prediction)})
