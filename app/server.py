@@ -63,7 +63,7 @@ async def analyze(request):
     #img = open_image(BytesIO(img_bytes))
     
     
-    comment = request.data["comment"]
+    comment = request.formData["comment"]
     #form_data = await request.form()
     #comment = form_data.get('comment');
     #comment = await (form_data['file'].read())
