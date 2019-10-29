@@ -7,7 +7,8 @@
 <body>
 <div>
   <div class='center'>
-    <div class='title'>GF NLP Comment Classifier</div>
+    <img alt="GF_NLP" src="../static/GF_NLP_transparent.png"  >
+    <div class='title'>Consumer Comment Classifier</div>
     <p>
       Checks to see if submitted comments are a <strong>Complaint</strong>, <strong>Compliment</strong>, <strong>Inquiry</strong> or <strong>Request</strong>.
     </p>
@@ -15,19 +16,6 @@
         <textarea id=textArea rows="4" cols="50">
           Input comment to be classified here...
         </textarea>
-        <!--input id='file-input'
-               class='no-display'
-               type='file'
-               name='file'
-               accept='image/*'
-               onchange='showPicked(this)'-->
-      <!--button class='choose-file-button' type='button' onclick='showPicker()'>Select Image</button-->
-      <!--div class='upload-label'>
-        <label id='upload-label'>No file chosen</label>
-      </div-->
-      <!--div>
-        <img id='image-picked' class='no-display' alt='Chosen Image' height='200'>
-      </div-->
       <div class='analyze'>
         <button id='analyze-button' class='analyze-button' type='button' onclick='analyze()'>Classify</button>
       </div>
@@ -37,5 +25,12 @@
     </div>
   </div>
 </div>
+<footer id=pageFooter>
+  <p>© 2019 <a href="http://www.sparkflow.com" target="_blank">Sparkflow</a> | 
+    <a href="http://jsw.co" target="_blank">J.S. Walker &amp; Company, Inc.</a>
+    &nbsp;
+    Version <a href="https://github.com/flizzer/fastai-v3/releases/latest">Latest Release</a>
+  </p>
+</footer>
 </body>
 </html>
