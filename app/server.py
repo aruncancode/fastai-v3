@@ -58,27 +58,11 @@ async def homepage(request):
 
 @app.route('/analyze', methods=['POST'])
 async def analyze(request):
-    #img_data = await request.form()
-    #img_bytes = await (img_data['file'].read())
-    #img = open_image(BytesIO(img_bytes))
-    
-    
-    #comment = request.formData["comment"]
     form_data = await request.form();
     comment = form_data['comment'];
     prediction = learn.predict(comment)
     return JSONResponse({'result': str(prediction)})
     
-    #form_contents = await (form_data['comment'].read());
-    #comment = await (form_data['file'].read())
-    #return JSONResponse({'result': form_contents})
-    
-    #prediction = learn.predict(comment)
-    #return JSONResponse({'result': str(prediction)})
-    
-    #Test Result --bhd
-    #return JSONResponse({'result': 'Result Returned'})
-
 
 if __name__ == '__main__':
     if 'serve' in sys.argv:
